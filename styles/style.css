@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid #f2f2f2;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.logo img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.search input {
+  width: 400px;
+  padding: 0.5rem;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.button {
+  padding: 0.25rem 1.5rem;
+  border: 1px solid #2c5fd5;
+  border-radius: 3px;
+  color: #2c5fd5;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.01);
+}
+
+/* .button .icon {
+  pointer-events: none; 
+  display: block; 
+  width: 100%; 
+  height: 100%;
+} */
+
+.subscribe .button {
+  border: none;
+  background-color: #fb2300;
+  color: white;
+  padding: 10px 16px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.subscribe .button:hover {
+  background-color: #c00;
+}
+
+main {
+  margin: auto;
+
+  display: grid;
+  grid-row-gap: 1rem;
+
+  grid-template-areas:
+    "video-player video-player"
+    "video-info   video-info"
+    "actions      actions"
+    "channel      subscribe"
+    "up-next      up-next";
+}
+
+.video-player {
+  grid-area: video-player;
+
+  position: relative;
+  padding: 1rem 0 56.25% 1rem;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.video-player iframe,
+.video-player object,
+.video-player embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-info {
+  grid-area: video-info;
+
+  padding: 0 0 1rem 1rem;
+}
+
+.video-info h1 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.video-info .views {
+  color: #606060;
+}
+
+.actions {
+  grid-area: actions;
+
+  border-bottom: 1px solid #ddd;
+  padding: 0 1rem 0.5rem 1rem;
+  color: #636363;
+
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: space-evenly;
+  align-items: end;
+  grid-gap: 1rem;
+}
+
+.action {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.action:last-child {
+  grid-template-columns: auto;
+}
+
+.action svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.channel {
+  grid-area: channel;
+
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  grid-gap: 1rem;
+  cursor: pointer;
+}
+
+.channel img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+.channel .date {
+  color: #777;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.channel .channel-description {
+  font-size: 0.8rem;
+}
+
+.subscribe {
+  grid-area: subscribe;
+
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+}
+
+.ad {
+  grid-area: ad;
+  text-align: center;
+  color: white;
+}
+
+.ad img {
+  width: 100%;
+  margin: 1rem;
+}
+
+.up-next {
+  grid-area: up-next;
+
+  margin: 1rem;
+}
+
+.up-next a {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  grid-gap: 0.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.up-next img {
+  width: 100%;
+}
+
+.up-next h4 {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.up-next p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    grid-template-columns: auto auto;
+  }
+
+  .search,
+  .ad {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    max-width: 1200px;
+
+    grid-template-areas:
+      "video-player video-player ad"
+      "video-player video-player up-next"
+      "video-info   actions      up-next"
+      "channel      subscribe    up-next"
+      ".            .            up-next";
+  }
+
+  .video-info {
+    border-bottom: 1px solid #ddd;
+  }
+}
