@@ -2,12 +2,12 @@
 
 ![Badge](/github/login.gif)
 
-## 💻 Proposta do projeto
+## 💻 Project proposal
 
-Este é um projeto em desenvolvimento, no qual o objetivo principal é fazer uma "réplica" do YouTube. Projeto encontra-se na sua primeira versão, onde foi desenvolvido somente a parte de layout, iniciado com mobile first.
+This is a project under development, in which the main objective is to make a "replica" of YouTube. Project is in its first version, where only the layout part was developed, started with mobile first.
 
 <h2>
-  👨‍💻 Tecnologias utilizadas
+  👨‍💻 Technologies used
 </h2>
 
 <ul>
@@ -16,7 +16,7 @@ Este é um projeto em desenvolvimento, no qual o objetivo principal é fazer uma
 </ul>
 
 <h2>
-  🔍 Requisitos de software
+  🔍 Software requirements
 </h2>
 
 <ul>
@@ -24,21 +24,19 @@ Este é um projeto em desenvolvimento, no qual o objetivo principal é fazer uma
 </ul>
 
 <h2>
-  💡 Para acessar o projeto
+  💡 To access the project
 </h2>
 
-### Clone o repositório para ter uma cópia do código em sua máquina
+### Clone the repository to have a copy of the code on your machine
 ```bash
 $ git clone https://github.com/DeboraZandonai/YouTube.git
 ```
-### Para visualizar o projeto 
+### To view the project 
 ```bash
 $ open with Live Server
 ```
 
-## 📝 Licença
-Este projeto encontra-se sob a licença **MIT**. Para mais informações, acesse o arquivo **LICENSE**.
-
-<hr />
+## 📝 License
+This project is under the **MIT** license. For more information, access the file **LICENSE**.
 
 <h4 align=center>Made with ❤️ by <a href="https://www.linkedin.com/in/debora-zandonai-4ab092195/">Debora Zandonai</a></h4>
